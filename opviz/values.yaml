@@ -85,14 +85,22 @@ fluentd:
         value: root
       - name: FLUENTD_DAEMON_GROUP
         value: root
+      - name: FLUENTD_SERVICE
+        value: opviz-fluentd-headless.default.svc.cluster.local
 
-eleasticsearch:
+elasticsearch:
+  metrics:
+    enabled: true
   kibana:
     elasticsearch:
-      host:
+      hosts:
+        - 'opviz-elasticsearch-coordinating-only.default.svc.cluster.local'
+    service:
+      type: LoadBalancer
 
 grafana:
   service:
     type: LoadBalancer
+
 
 

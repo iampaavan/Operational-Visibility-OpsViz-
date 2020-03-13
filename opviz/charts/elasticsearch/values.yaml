@@ -783,7 +783,6 @@ kibana:
   elasticsearch:
     enabled: false
     hosts:
-      - 'opviz-elasticsearch-coordinating-only.default.svc.cluster.local'
     port: 9200
   service:
     type: LoadBalancer

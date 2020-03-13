@@ -85,7 +85,7 @@ data:
     <match **>
       @type forward
       <server>
-        host opviz-fluentd-headless.default.svc.cluster.local
+        host "#{ENV['FLUENTD_SERVICE']}"
         port 24224
       </server>
 
